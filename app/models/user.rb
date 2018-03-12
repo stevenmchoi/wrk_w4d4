@@ -11,6 +11,7 @@ class User < ApplicationRecord
     self.session_token = User.generate_session_token
     # if new, created; else, updated. If invalid: ActiveRecord::RecordInvalid
     self.save!
+    # return session_token
     self.session_token
   end
 
